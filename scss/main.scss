@@ -94,6 +94,30 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+   .board {
+      border:100px solid #46629E  ;
+      border-collapse:collapse;
+      padding:5px;
+   }
+   .board th {
+      border:10px solid #46629E  ;
+      padding:5px;
+   }
+   .board td {
+      border:0px
+      padding:5px;
+   width: 75px;
+   height: 20px;
+   }
+   .light {
+   background-color: lightgreen;
+   }
+   .dark {
+   background-color: darkgreen;
+   }
+   .button {
+     width: 17.41em;  height: 2em;
+   }
 
 
 

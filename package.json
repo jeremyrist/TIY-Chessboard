@@ -1,0 +1,24 @@
+{
+  "name": "tiy-chessboard",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "browser-sync start --server --directory",
+    "sass": "node-sass scss/main.scss --output css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremyrist/TIY-Chessboard.git"
+  },
+  "author": "Jeremy Rist <jtrain18@brandeis.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeremyrist/TIY-Chessboard/issues"
+  },
+  "homepage": "https://github.com/jeremyrist/TIY-Chessboard#readme",
+  "dependencies": {
+    "node-sass": "^3.3.3"
+  }
+}

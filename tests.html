@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   <title>Mocha Tests</title>
-  <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" /> 
+  <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
 </head>
 <body>
   <div id="mocha"></div>
@@ -16,123 +16,16 @@
   <script src="test.array.js"></script>
   <script src="test.object.js"></script>
   <script src="test.xhr.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/tests.js"></script>
+  <script src="js/plugins.js"></script>
   <script>
     mocha.checkLeaks();
     mocha.globals(['jQuery']);
     mocha.run();
   </script>
 
-        <table class="board">
-        <caption><h1>Chess</h1></caption>
-        <thead>
-        <tr>
-           <th>Markers</th>
-           <th>Column 1</th>
-           <th>Column 2</th>
-           <th>Column 3</th>
-           <th>Column 4</th>
-           <th>Column 5</th>
-           <th>Column 6</th>
-           <th>Column 7</th>
-           <th>Column 8</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-           <th>Row A</th>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-        </tr>
-        <tr>
-           <th>Row B</th>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-        </tr>
-        <tr>
-           <th>Row C</th>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-        </tr>
-        <tr>
-           <th>Row D</th>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-        </tr>
-        <tr>
-           <th>Row E</th>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-        </tr>
-        <tr>
-           <th>Row F</th>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-        </tr>
-        <tr>
-           <th>Row G</th>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-        </tr>
-        <tr>
-           <th>Row H</th>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-           <td class="dark"></td>
-           <td class="light"></td>
-        </tr>
-        <tbody>
-        </table>
-        <button class="button" id="rewind" type="button">Rewind</button>
-        <button class="button" id="step_back" type="button">Step Back</button>
-        <button class="button" id="play_pause" type="button">Play/Pause</button>
-        <button class="button" id="step_foward" type="button">Step Forward</button>
-        <button class="button" id="fast_foward" type="button">Fast Forward</button>
+      
 
 </body>
 </html>

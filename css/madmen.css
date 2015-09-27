@@ -1,0 +1,44 @@
+body {
+  background-image: url("http://arsgrafik.s3.amazonaws.com/uploads/2009/12/victorian-damask-background-texture-white.jpg");
+}
+
+.board {
+   border:100px ridge darkgoldenrod ;
+   margin-left: 13vw;
+}
+.board th {
+   border:10px solid navy;
+   padding:5px;
+}
+.board td {
+   border:0px
+   padding:5px;
+   width: 75px;
+   height: 75px;
+}
+.aqua {
+background-color: lightgray;
+background-image: url("http://static.guim.co.uk/sys-images/Guardian/About/General/2009/9/21/1253535776474/Gary-Kasparov-and-Anatoli-001.jpg");
+}
+.sky {
+background-color: black;
+}
+
+i {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 1px;
+}
+
+h1 {
+  font-family: courier;
+  margin-left: 6vw;
+}
+
+nav {
+  display: inline-block;
+  margin-left: 37vw;
+  letter-spacing: 8px;
+  padding-top: 20px;
+  font-size: 300%;
+}

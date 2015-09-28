@@ -3,7 +3,7 @@ body {
 }
 
 .board {
-   border:100px ridge darkgoldenrod ;
+   border:100px ridge blue ;
    margin-left: 13vw;
 }
 .board th {
@@ -15,13 +15,15 @@ body {
    padding:5px;
    width: 75px;
    height: 75px;
+   text-align: center;
+   font-size: 40px;
 }
 .aqua {
 background-color: lightgray;
-background-image: url("http://static.guim.co.uk/sys-images/Guardian/About/General/2009/9/21/1253535776474/Gary-Kasparov-and-Anatoli-001.jpg");
+/*background-image: url("http://static.guim.co.uk/sys-images/Guardian/About/General/2009/9/21/1253535776474/Gary-Kasparov-and-Anatoli-001.jpg");*/
 }
 .sky {
-background-color: black;
+background-color: darkgray;
 }
 
 i {
@@ -41,4 +43,41 @@ nav {
   letter-spacing: 8px;
   padding-top: 20px;
   font-size: 300%;
+}
+
+#play_pause:hover {
+  cursor: pointer;
+  color: blue;
+}
+#fast_forward:hover {
+  cursor: pointer;
+  color: blue;
+}
+#step_forward:hover {
+    cursor: pointer;
+    color:blue;
+}
+#rewind:hover {
+  cursor: pointer;
+  color:blue;
+}
+#step_backward:hover {
+  cursor: pointer;
+  color:blue;
+}
+
+#play_pause {
+  font-size: 40px;
+}
+#fast_forward {
+  font-size: 40px;
+}
+#step_forward {
+  font-size: 40px;
+}
+#rewind {
+  font-size: 40px;
+}
+#step_backward {
+  font-size: 40px;
 }

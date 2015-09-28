@@ -23,17 +23,37 @@
    */
   var moves = [
     // TODO: Fill me in!
+    "d4",
+    "Nf6",
+    "c4",
+    "e6",
+    "g3",
+    "d5"
+    "Bg2",
+    "Be7",
+    "Nf3"
   ]; // END moves
 
   // var current; TODO: do we need this?
 
   // You don't need to understand `globals` yet...
   var game = (globals.game = {
+
     /**
      * Provide a _copy_ of the game board in order to update the View from it
      *
      * @return {Array} of {Array} of {String|null}
+
      */
+         [ 'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R' ],
+         [ 'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P' ],
+         [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
+         [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
+         [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
+         [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
+         [ 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p' ],
+         [ 'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r' ],
+
     board: function(){
       return board.map(function(row){
         return row.slice();
@@ -44,6 +64,8 @@
      *
      * @return {Object} the game object for Method Chaining
      */
+
+
     reset: function(){
       board = initial();
 
@@ -55,8 +77,18 @@
      * @return {Object} the game object for Method Chaining
      * @todo Make this work!
      */
+
     next: function(){
       // Doesn't this seem to be missing something?
+      /*  [ 'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R' ],
+          [ 'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P' ],
+          [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
+          [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
+          [ ' ', ' ', ' ', 'p', ' ', ' ', ' ', ' ' ],
+          [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
+          [ 'p', 'p', 'p', ' ', 'p', 'p', 'p', 'p' ],
+          [ 'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r' ],
+      */
       return this;
     },
     /**

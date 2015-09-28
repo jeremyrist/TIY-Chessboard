@@ -10,9 +10,9 @@
 
    <script language="javascript" type="text/javascript" src="jquery-1.8.3.js"></script>
       <script language="javascript" type="text/javascript">
-         $(function(){
-            alert("My First Jquery Test");
-         });
+      //   $(function(){
+      //      alert("My First Jquery Test");
+      //   });
       </script>
 
    <title>Chessboard</title>
@@ -22,7 +22,7 @@
    <caption><h1>Wizard Chess</h1></caption>
 
    <nav>
-   <i class="fa fa-wikipedia-w"></i>
+   <a href="http://www.chess.com/article/view/clash-of-champions-kasparov-karpov"<i class="fa fa-wikipedia-w"></i></a>
    <i class="fa fa-i-cursor"></i>
    <i class="fa fa-hourglass"></i>
    <i class="fa fa-amazon"></i>
@@ -33,19 +33,41 @@
    <thead>
      <tr>
        <th>Markers</th>
-       <th>1</th>
-       <th>2</th>
-       <th>3</th>
-       <th>4</th>
-       <th>5</th>
-       <th>6</th>
-       <th>7</th>
-       <th>8</th>
+       <th>A</th>
+       <th>B</th>
+       <th>C</th>
+       <th>D</th>
+       <th>E</th>
+       <th>F</th>
+       <th>G</th>
+       <th>H</th>
      </tr>
    </thead>
    <tbody>
      <tr>
-       <th>A</th>
+       <th>8</th>
+       <td class="aqua">&#9820;</td>
+       <td class="sky">&#9822;</td>
+       <td class="aqua">&#9821;</td>
+       <td class="sky">&#9819;</td>
+       <td class="aqua">&#9818;</td>
+       <td class="sky">&#9821;</td>
+       <td class="aqua">&#9822;</td>
+       <td class="sky">&#9820;</td>
+     </tr>
+     <tr>
+       <th>7</th>
+       <td class="sky">&#9823;</td>
+       <td class="aqua">&#9823;</td>
+       <td class="sky">&#9823;</td>
+       <td class="aqua">&#9823;</td>
+       <td class="sky">&#9823;</td>
+       <td class="aqua">&#9823;</td>
+       <td class="sky">&#9823;</td>
+       <td class="aqua">&#9823;</td>
+     </tr>
+     <tr>
+       <th>6</th>
        <td class="aqua"></td>
        <td class="sky"></td>
        <td class="aqua"></td>
@@ -56,7 +78,7 @@
        <td class="sky"></td>
      </tr>
      <tr>
-       <th>B</th>
+       <th>5</th>
        <td class="sky"></td>
        <td class="aqua"></td>
        <td class="sky"></td>
@@ -67,7 +89,7 @@
        <td class="aqua"></td>
      </tr>
      <tr>
-       <th>C</th>
+       <th>4</th>
        <td class="aqua"></td>
        <td class="sky"></td>
        <td class="aqua"></td>
@@ -78,7 +100,7 @@
        <td class="sky"></td>
      </tr>
      <tr>
-       <th>D</th>
+       <th>3</th>
        <td class="sky"></td>
        <td class="aqua"></td>
        <td class="sky"></td>
@@ -89,59 +111,38 @@
        <td class="aqua"></td>
      </tr>
      <tr>
-       <th>E</th>
-       <td class="aqua"></td>
-       <td class="sky"></td>
-       <td class="aqua"></td>
-       <td class="sky"></td>
-       <td class="aqua"></td>
-       <td class="sky"></td>
-       <td class="aqua"></td>
-       <td class="sky"></td>
+       <th>2</th>
+       <td class="aqua">&#9817;</td>
+       <td class="sky">&#9817;</td>
+       <td class="aqua">&#9817;</td>
+       <td class="sky">&#9817;</td>
+       <td class="aqua">&#9817;</td>
+       <td class="sky">&#9817;</td>
+       <td class="aqua">&#9817;</td>
+       <td class="sky">&#9817;</td>
      </tr>
      <tr>
-       <th>F</th>
-       <td class="sky"></td>
-       <td class="aqua"></td>
-       <td class="sky"></td>
-       <td class="aqua"></td>
-       <td class="sky"></td>
-       <td class="aqua"></td>
-       <td class="sky"></td>
-       <td class="aqua"></td>
-     </tr>
-     <tr>
-       <th>G</th>
-       <td class="aqua"></td>
-       <td class="sky"></td>
-       <td class="aqua"></td>
-       <td class="sky"></td>
-       <td class="aqua"></td>
-       <td class="sky"></td>
-       <td class="aqua"></td>
-       <td class="sky"></td>
-     </tr>
-     <tr>
-       <th>H</th>
-       <td class="sky"></td>
-       <td class="aqua"></td>
-       <td class="sky"></td>
-       <td class="aqua"></td>
-       <td class="sky"></td>
-       <td class="aqua"></td>
-       <td class="sky"></td>
-       <td class="aqua"></td>
+       <th>1</th>
+       <td class="sky">&#9814;</td>
+       <td class="aqua">&#9816;</td>
+       <td class="sky">&#9815;</td>
+       <td class="aqua">&#9813;</td>
+       <td class="sky">&#9812;</td>
+       <td class="aqua">&#9815;</td>
+       <td class="sky">&#9816;</td>
+       <td class="aqua">&#9814;</td>
      </tr>
    </table>
  </tbody>
 
 <nav>
- <i class="fa fa-forward"></i>
- <i class="fa fa-step-forward"></i>
- <i class="fa fa-youtube-play"></i>
- <i class="fa fa-step-backward"></i>
- <i class="fa fa-backward"></i>
- </nav>
+ <button class="button" id="step_backward" type="button"><i class="fa fa-step-backward"></i></button>
+ <button class="button" id="rewind" type="button"> <i class="fa fa-backward"></i></button>
+ <button class="button" id="play_pause" type="button"><i class="fa fa-youtube-play"></i></button>
+ <button class="button" id="fast_forward" type="button"><i class="fa fa-forward"></i></button>
+ <button class="button" id="step_forward" type="button"><i class="fa fa-step-forward"></i></button>
+</nav>
+
 
  </body>
 </html>

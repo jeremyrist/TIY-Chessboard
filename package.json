@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/jeremyrist/TIY-Chessboard#readme",
   "dependencies": {
-    "node-sass": "^3.3.3"
+    "node-sass": "^3.3.3",
+    "chai": "*",
+    "mocha": "*"";
   }
 }

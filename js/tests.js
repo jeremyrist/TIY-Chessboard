@@ -5,13 +5,13 @@
   //   chai.expect(false).equals(true);
   // })
 
-  it('should have a `game` in the `window`', function(){
+  it.skip('should have a `game` in the `window`', function(){
     chai.expect(window.game).to.be.equal(game);
     chai.expect(game).to.be.an('object');
     chai.expect(game.board).to.a('function'); // ???
   });
 
-  it('should give me a big array as the board', function(){
+  it.skip('should give me a big array as the board', function(){
     var board = game.board();
 
     chai.expect(board).to.be.an('array');
@@ -26,7 +26,7 @@
 
   }); // END it should be a big Array
 
-  it('should be able to move pieces', function(){
+  it.skip('should be able to move pieces', function(){
     // board[0][0] = board[0][1];
     game.applyMove(
       // TODO: one day take { file: 'd', rank: 2 },

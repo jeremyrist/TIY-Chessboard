@@ -18,7 +18,7 @@
   document.querySelector(play_pause)
     .addEventListener('click', applyMove);
   // AKA
-  jQuery(play_pause).on('click', applyMove);
+  $(play_pause).on('click', applyMove);
   // Where CALLBACK is...
   function applyMove (EVENT){
     // Do something with Models and Views...

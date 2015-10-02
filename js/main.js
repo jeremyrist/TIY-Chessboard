@@ -1,18 +1,20 @@
-(function(globals){ // IIFE: Immediately Invoked Function Expression
-})(window || module && module.exports || this);
-
-(function(globals){ // IIFE: Immediately Invoked Function Expression
+(function(globals){
 // Don't worry if that seems a little funky...
 
   /**
    * Internal representation of the game board in its current state.
    *
-   * @see game.board
+   * @see game.board //game.board is an array that contains the beginning setup of chess
    * @see game.tracer
    * @see initial
    * @var {Array} of {Array} of {String|null}
    */
   var board = initial(); // initialize the `board`
+
+  // I don't know where game.reset goes or is but it seems related to this initial function
+  // initial will mean the beggining state of the game and reset will take the board and move it back to that
+  // What this means is that the array that was been manipulated to represent the moves will go back to square one
+
 
   /**
    * List of moves for the "Catalan Opening: Closed Variation" suitable for use
@@ -21,39 +23,20 @@
    * @see applyMove
    * @var {Array} of...?
    */
+
   var moves = [
     // TODO: Fill me in!
-    "d4",
-    "Nf6",
-    "c4",
-    "e6",
-    "g3",
-    "d5"
-    "Bg2",
-    "Be7",
-    "Nf3"
   ]; // END moves
 
   // var current; TODO: do we need this?
 
   // You don't need to understand `globals` yet...
-  var game = (globals.game = {
-
+  var game = globals.game = {
     /**
      * Provide a _copy_ of the game board in order to update the View from it
      *
      * @return {Array} of {Array} of {String|null}
-
      */
-         [ 'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R' ],
-         [ 'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P' ],
-         [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
-         [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
-         [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
-         [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
-         [ 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p' ],
-         [ 'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r' ],
-
     board: function(){
       return board.map(function(row){
         return row.slice();
@@ -64,8 +47,6 @@
      *
      * @return {Object} the game object for Method Chaining
      */
-
-
     reset: function(){
       board = initial();
 
@@ -77,18 +58,8 @@
      * @return {Object} the game object for Method Chaining
      * @todo Make this work!
      */
-
     next: function(){
       // Doesn't this seem to be missing something?
-      /*  [ 'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R' ],
-          [ 'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P' ],
-          [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
-          [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
-          [ ' ', ' ', ' ', 'p', ' ', ' ', ' ', ' ' ],
-          [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
-          [ 'p', 'p', 'p', ' ', 'p', 'p', 'p', 'p' ],
-          [ 'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r' ],
-      */
       return this;
     },
     /**
@@ -123,7 +94,7 @@
       for ( var rank = 0; rank < board.length; rank++ ){
         bullet += '|';
         for ( var file = 0; file < board[rank].length; file++ ){
-          bullet += (board[rank][file] || ' ') + '|';
+          bullet += board[rank][file] || ' |';
         }
         bullet += '\n';
       }
@@ -140,11 +111,19 @@
      *
      * @todo Fill me in! ...and remove this comment.
      */
-    applyMove: function(from, to){
-      // You should write something in here...
-    } // END applyMove
-  }); // END game
+    function applyMove(from, to){
 
+      moves[0].to = moves[0].from;
+      moves[0].from = null;
+
+        return moves[0].to;
+      // This is going to be the function that moves the pieces
+      // Meaning it will manipulate the array containing the moves
+      // It will spit out the appropriate array number for the move
+
+    } // END applyMove
+  }; // END game
+      console.log(game.tracer());
   /**
    * Provide the initial state of the game board, useful for any game.
    *

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "start": "browser-sync start --server --directory",
+    "test": "browser-sync start --server --startPath tests.html --files='js/*.js'",
+    "start": "browser-sync start --server --startPath='index-9-24.html' --files='index-9-24.html, css/*.css, js/*.js'",
     "sass": "node-sass scss/main.scss --output css/"
   },
   "repository": {
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/jeremyrist/TIY-Chessboard#readme",
   "dependencies": {
-    "node-sass": "^3.3.3"
+    "node-sass": "^3.3.3",
+    "chai": "*",
+    "mocha": "*"";
   }
 }

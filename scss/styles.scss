@@ -1,0 +1,62 @@
+.black-rook:before {
+  content: "\265C";
+}
+
+.black-knight:before {
+  content: "\265E";
+}
+
+.black-bishop:before {
+  content: "\265D";
+}
+
+.black-queen:before {
+  content: "\265B";
+}
+
+.black-king:before {
+  content: "\265A";
+}
+
+.black-pawn:before {
+  content: "\265F"
+}
+
+  .white-rook:before {
+    content: "\2656";
+  }
+
+  .white-knight:before {
+    content: "\2658";
+  }
+
+  .white-bishop:before {
+    content: "\2657";
+  }
+
+  .white-queen:before {
+    content: "\2655";
+  }
+
+  .white-king:before {
+    content: "\2654";
+  }
+
+  .white-pawn:before {
+    content: "\2659"
+  }
+
+    tr {
+      &:nth-of-type(odd) {
+        td:nth-of-type(odd) {
+          background-color: gray;
+        }
+      }
+    }
+    tr {
+      &:nth-of-type(even) {
+        td:nth-of-type(even) {
+          background-color: gray;
+        }
+      }
+    }

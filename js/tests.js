@@ -5,7 +5,7 @@
   //   chai.expect(false).equals(true);
   // })
 
-  it.skip('should have a `game` in the `window`', function(){
+  it('should have a `game` in the `window`', function(){
     chai.expect(window.game).to.be.equal(game);
     chai.expect(game).to.be.an('object');
     chai.expect(game.board).to.a('function'); // ???
@@ -37,8 +37,8 @@
 
     var board = game.board();
 
-    chai.expect(board[6][3]).to.be.equal(null);
-    chai.expect(board[4][3]).to.be.equal('p');
+    chai.expect(board[6][3]).to.be.equal('p');
+    chai.expect(board[4][3]).to.be.null;
 
   });
 

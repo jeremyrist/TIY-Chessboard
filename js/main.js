@@ -112,12 +112,18 @@
      * @todo Fill me in! ...and remove this comment.
      */
     function applyMove(from, to){
+
+      moves[0].to = moves[0].from;
+      moves[0].from = null;
+
+        return moves[0].to;
       // This is going to be the function that moves the pieces
       // Meaning it will manipulate the array containing the moves
       // It will spit out the appropriate array number for the move
+
     } // END applyMove
   }; // END game
-
+      console.log(game.tracer());
   /**
    * Provide the initial state of the game board, useful for any game.
    *

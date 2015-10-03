@@ -33,14 +33,16 @@
     // TODO: Fire tracer bullet!
     console.log("TRACER BULLET");
     // TODO: Tell the Model -- `game` -- to advance to the next move...
+    game.next();
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for "previous move"...
   jQuery("#step_backward").on('click', function(){
     // TODO: Fire tracer bullet!
-    console.log("TRACER BULLET");
+    console.log("step backward");
     // TODO: Tell the Model -- `game` -- to advance to the previous move...
+    game.reset();
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
@@ -49,14 +51,16 @@
     // TODO: Fire tracer bullet!
     console.log("TRACER BULLET");
     // TODO: Tell the Model -- `game` -- to advance to the last move...
+    game.end();
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for anything else...
   jQuery("#rewind").on('click', function(){
     // TODO: Fire tracer bullet!
-    console.log("TRACER BULLET");
+    console.log("rewind");
     // TODO: Tell the Model -- `game` -- to do something it knows how to do...
+    game.prev();
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
@@ -96,7 +100,21 @@
 
       if (piece) $square.text(piece); // Not _exactly_ what we discussed in class...
         // TODO: Convert `square` to class name(s)
-        // TODO: Add class name(s) to `td` instead
+        var $square = ('black-rook')
+        var $square = ('black-knight')
+        var $square = ('black-bishop')
+        var $square = ('black-queen')
+        var $square = ('black-king')
+        var $square = ('black-pawn')
+            // 'black-rook', 'black-knight', 'black-bishop', 'black-queen', 'black-king', 'black-pawn'
+        var $square = ('white-rook')
+        var $square = ('white-knight')
+        var $square = ('white-bishop')
+        var $square = ('white-queen')
+        var $square = ('white-king')
+        var $square = ('white-pawn')
+            // 'white-rook', 'white-knight', 'white-bishop', 'white-queen', 'white-king', 'white-pawn'
+        // TODO: Add class name(s) to `td` instead    
     });
   });
 

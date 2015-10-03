@@ -4,18 +4,14 @@
   /**
    * Internal representation of the game board in its current state.
    *
-   * @see game.board //game.board is an array that contains the beginning setup of chess
+   * @see game.board
    * @see game.tracer
    * @see initial
    * @var {Array} of {Array} of {String|null}
    */
   var board = initial(); // initialize the `board`
-
-  // I don't know where game.reset goes or is but it seems related to this initial function
-  // initial will mean the beggining state of the game and reset will take the board and move it back to that
-  // What this means is that the array that was been manipulated to represent the moves will go back to square one
-
-
+  var ctr = -1;
+ // should be nine though...
   /**
    * List of moves for the "Catalan Opening: Closed Variation" suitable for use
    * as arguments to `applyMove` below.
@@ -23,10 +19,30 @@
    * @see applyMove
    * @var {Array} of...?
    */
-
   var moves = [
+    // {from: {rank: 4, file: 3}, to: {rank: 4, file: 3}}, // just a filler... no effect
+    {from: {rank: 6, file: 3}, to: {rank: 4, file: 3}}, // first move from 6,3 to 4,3
+    {from: {rank: 0, file: 6}, to: {rank: 2, file: 5}}, // second move
+    {from: {rank: 6, file: 2}, to: {rank: 4, file: 2}}, // the rest of the move
+    {from: {rank: 1, file: 4}, to: {rank: 2, file: 4}},
+    {from: {rank: 6, file: 6}, to: {rank: 5, file: 6}},
+    {from: {rank: 1, file: 3}, to: {rank: 3, file: 3}},
+    {from: {rank: 7, file: 5}, to: {rank: 6, file: 6}},
+    {from: {rank: 0, file: 5}, to: {rank: 1, file: 4}},
+    {from: {rank: 7, file: 6}, to: {rank: 5, file: 5}},
+  ];
+
+    // [4,3,6,3],  // [destination, destination, to, to]
+    // [2,5,0,6],  // [destination, destination, to, to]
+    // [4,2,6,2],  // [destination, destination, to, to]
+    // [2,4,1,4],  // [destination, destination, to, to]
+    // [5,6,6,6],  // [destination, destination, to, to]
+    // [3,3,1,3],  // [destination, destination, to, to]
+    // [6,6,7,5],  // [destination, destination, to, to]
+    // [1,4,0,5],  // [destination, destination, to, to]
+    // [5,5,7,6]   // [destination, destination, to, to]
     // TODO: Fill me in!
-  ]; // END moves
+ // END moves
 
   // var current; TODO: do we need this?
 
@@ -49,7 +65,7 @@
      */
     reset: function(){
       board = initial();
-
+      ctr = -1;
       return this;
     },
     /**
@@ -60,7 +76,18 @@
      */
     next: function(){
       // Doesn't this seem to be missing something?
-      return this;
+      console.log ("mainjs next!");
+      if (ctr < moves.length) {
+      ctr++;
+      console.log (ctr);
+      var curFromMove = moves[ctr].from;
+      var curToMove = moves[ctr].to;
+      console.log (curFromMove);
+      console.log (curToMove);
+      game.applyMove(curFromMove, curToMove);
+      return board;
+    }
+      // return this;
     },
     /**
      * Advance the internal game board to the previous move.
@@ -69,8 +96,15 @@
      * @todo Make this work!
      */
     prev: function(){
-      // Another good place for code...
-      return this;
+      if (ctr >= 0){
+        var curFromMove = moves[ctr].to; //inversed `from and `to`
+        var curToMove = moves[ctr].from; //inversed `from and `to`
+        game.applyMove(curFromMove, curToMove);
+        console.log('main back');
+        ctr--;
+        console.log (ctr);
+        return board;
+      }
     },
     /**
      * Advance the internal game board to the last move.
@@ -79,9 +113,17 @@
      * @todo Make this work!
      */
     end: function(){
-      // Write some code here...
-      return this;
-    },
+      while (ctr < moves.length) {
+      ctr += 1;
+      console.log (ctr);
+      var curFromMove = moves[ctr].from;
+      var curToMove = moves[ctr].to;
+      console.log (curFromMove);
+      console.log (curToMove);
+      game.applyMove(curFromMove, curToMove);
+    }
+    return board;
+  },
     /**
      * Provide a printable representation of the game board for use as a tracer
      *
@@ -111,19 +153,15 @@
      *
      * @todo Fill me in! ...and remove this comment.
      */
-    // function applyMove(from, to){
-    //
-    //   moves[0].to = moves[0].from;
-    //   moves[0].from = null;
-    //
-    //     return moves[0].to;
-      // This is going to be the function that moves the pieces
-      // Meaning it will manipulate the array containing the moves
-      // It will spit out the appropriate array number for the move
-
-//    } // END applyMove
+    applyMove: function(from,to){
+        //board[x][y] = board [z][w];
+        board[to.rank][to.file] = board[from.rank][from.file];
+        board[from.rank][from.file]= ' ';
+        console.log (board.join ('\n' + '|'));
+        return board.join ('\n' + ' |');
+    } // END applyMove
   }; // END game
-      console.log(game.tracer());
+
   /**
    * Provide the initial state of the game board, useful for any game.
    *
@@ -131,16 +169,18 @@
    */
   function initial(){
     return [
-      [ 'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R' ],
+      [ '|R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R' ],
       [ 'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P' ],
-      Array(8).fill(null),
-      Array(8).fill(null),
-      Array(8).fill(null),
-      Array(8).fill(null),
+      [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
+      [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
+      [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
+      [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ],
       [ 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p' ],
       [ 'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r' ],
     ];
   } // END initial
+
+
 
 // You are not expected to understand anything below this line...
 })(window || module && module.exports || this);

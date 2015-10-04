@@ -97,10 +97,13 @@
 
       console.log($square.get(), rank, file, piece);
       // Use the log, Luke!
-        if (gameboard[4][3] === 'p') {
-          return "white-pawn"
+        // if (gameboard[4][3] === 'p') {
+        //   return "white-pawn"
+        // }
+  // if (piece) $square.text(piece); // Not _exactly_ what we discussed in class...
+        if (piece == "p") {
+          $("td").text(piece);
         }
-    //  if (piece) $square.text(piece); // Not _exactly_ what we discussed in class...
         // TODO: Convert `square` to class name(s)
         // var $square = ((0, 0, 'black-rook'), (0, 7, 'black-rook'));
         // var $square = ((0, 1 , 'black-knight'), (0, 6, 'black-knight'));

@@ -101,7 +101,7 @@
         //   return "white-pawn"
         // }
   // if (piece) $square.text(piece); // Not _exactly_ what we discussed in class...
-        if (piece == "p") {
+        if (piece = game.next()) {
           $("td").text(piece);
         }
         // TODO: Convert `square` to class name(s)

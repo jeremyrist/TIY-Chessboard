@@ -100,21 +100,25 @@
 
       if (piece) $square.text(piece); // Not _exactly_ what we discussed in class...
         // TODO: Convert `square` to class name(s)
-        var $square = ('black-rook')
-        var $square = ('black-knight')
-        var $square = ('black-bishop')
-        var $square = ('black-queen')
-        var $square = ('black-king')
-        var $square = ('black-pawn')
-            // 'black-rook', 'black-knight', 'black-bishop', 'black-queen', 'black-king', 'black-pawn'
-        var $square = ('white-rook')
-        var $square = ('white-knight')
-        var $square = ('white-bishop')
-        var $square = ('white-queen')
-        var $square = ('white-king')
-        var $square = ('white-pawn')
+        // var $square = ((0, 0, 'black-rook'), (0, 7, 'black-rook'));
+        // var $square = ((0, 1 , 'black-knight'), (0, 6, 'black-knight'));
+        // var $square = ((0, 2, 'black-bishop'), (0, 5, 'black-bishop'));
+        // var $square = (0, 3, 'black-queen');
+        // var $square = (0, 4, 'black-king');
+        // var $square = ((1, 0, 'black-pawn'), (1, 1, 'black-pawn'), (1, 2, 'black-pawn'), (1, 3, 'black-pawn'), (1, 4, 'black-pawn'), (1, 5, 'black-pawn'), (1, 6, 'black-pawn'), (1, 7, 'black-pawn'));
+        //     // 'black-rook', 'black-knight', 'black-bishop', 'black-queen', 'black-king', 'black-pawn'
+        // var $square = ((7, 0, 'white-rook'), (7, 7, 'white-rook'));
+        // var $square = ((7, 1 , 'white-knight'), (7, 6, 'white-knight'));
+        // var $square = ((7, 2, 'white-bishop'), (7, 5, 'white-bishop'));
+        // var $square = (7, 3, 'white-queen');
+        // var $square = (7, 4, 'white-king');
+        // var $square = ((6, 0, 'white-pawn'), (6, 1, 'white-pawn'), (6, 2, 'white-pawn'), (6, 3, 'white-pawn'), (6, 4, 'white-pawn'), (6, 5, 'white-pawn'), (6, 6, 'white-pawn'), (6, 7, 'white-pawn'));
             // 'white-rook', 'white-knight', 'white-bishop', 'white-queen', 'white-king', 'white-pawn'
-        // TODO: Add class name(s) to `td` instead    
+        // TODO: Add class name(s) to `td` instead
+        $("button").click(function(){
+          $("td").addClass("white-pawn")
+        })
+        return $square;
     });
   });
 

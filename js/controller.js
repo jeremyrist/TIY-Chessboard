@@ -97,8 +97,10 @@
 
       console.log($square.get(), rank, file, piece);
       // Use the log, Luke!
-
-      if (piece) $square.text(piece); // Not _exactly_ what we discussed in class...
+        if (gameboard[4][3] === 'p') {
+          return "white-pawn"
+        }
+    //  if (piece) $square.text(piece); // Not _exactly_ what we discussed in class...
         // TODO: Convert `square` to class name(s)
         // var $square = ((0, 0, 'black-rook'), (0, 7, 'black-rook'));
         // var $square = ((0, 1 , 'black-knight'), (0, 6, 'black-knight'));
@@ -115,10 +117,8 @@
         // var $square = ((6, 0, 'white-pawn'), (6, 1, 'white-pawn'), (6, 2, 'white-pawn'), (6, 3, 'white-pawn'), (6, 4, 'white-pawn'), (6, 5, 'white-pawn'), (6, 6, 'white-pawn'), (6, 7, 'white-pawn'));
             // 'white-rook', 'white-knight', 'white-bishop', 'white-queen', 'white-king', 'white-pawn'
         // TODO: Add class name(s) to `td` instead
-        $("button").click(function(){
-          $("td").addClass("white-pawn")
-        })
-        return $square;
+
+    //    return $square;
     });
   });
 

@@ -100,11 +100,12 @@
         // if (gameboard[4][3] === 'p') {
         //   return "white-pawn"
         // }
-  // if (piece) $square.text(piece); // Not _exactly_ what we discussed in class...
-        if (piece = game.next()) {
-          $("td").text(piece);
-        }
+ if (piece) $square.text(piece); // Not _exactly_ what we discussed in class...
+        // if (game.next()) {
+        //   $square.text(piece);
+        // }
         // TODO: Convert `square` to class name(s)
+         $square.addClass("white-pawn");
         // var $square = ((0, 0, 'black-rook'), (0, 7, 'black-rook'));
         // var $square = ((0, 1 , 'black-knight'), (0, 6, 'black-knight'));
         // var $square = ((0, 2, 'black-bishop'), (0, 5, 'black-bishop'));

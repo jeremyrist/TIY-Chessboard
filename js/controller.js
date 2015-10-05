@@ -105,7 +105,12 @@
         //   $square.text(piece);
         // }
         // TODO: Convert `square` to class name(s)
-         $square.addClass("white-pawn");
+    //     $square.addClass("white-pawn");
+
+         $("button").click(function(){
+         $("td").addClass("white-pawn")
+       })
+       return $square;
         // var $square = ((0, 0, 'black-rook'), (0, 7, 'black-rook'));
         // var $square = ((0, 1 , 'black-knight'), (0, 6, 'black-knight'));
         // var $square = ((0, 2, 'black-bishop'), (0, 5, 'black-bishop'));

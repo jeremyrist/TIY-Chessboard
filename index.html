@@ -1,55 +1,164 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" type:"stylesheet" href="css/madmen.css">
+   <link rel="stylesheet" type:"stylesheet" href="css/styles.css">
+   <link rel="">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+   <script language="javascript" type="text/javascript" src="jquery-1.8.3.js"></script>
+      <script language="javascript" type="text/javascript">
+      //   $(function(){
+      //      alert("My First Jquery Test");
+      //   });
+      </script>
 
-        <!-- Add your site or application content here -->
-              <table border=”1px”>
-                  <tr height=”50px” width=”50px>
-                  <td height=”50px” width=”50px> </td>
-                  <td height=”50px” width=”50px> </td>
-                  <td height=”50px” width=”50px> </td>
-                  </tr>
-                  <tr height=”50px” width=”50px>
-                  <td height=”50px” width=”50px> </td>
-                  <td height=”50px” width=”50px> </td>
-                  <td height=”50px” width=”50px> </td>
-                  </tr>
-                  <tr height=”50px” width=”50px>
-                  <td height=”50px” width=”50px> </td>
-                  <td height=”50px” width=”50px> </td>
-                  <td height=”50px” width=”50px> </td>
-                  </tr>
-              </table>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-    </body>
+   <title>Chessboard</title>
+ </head>
+ <body>
+   <table class="board">
+   <caption><h1>Wizard Chess</h1></caption>
+
+   <nav>
+   <a href="http://www.chess.com/article/view/clash-of-champions-kasparov-karpov"<i class="fa fa-wikipedia-w"></i></a>
+   <i class="fa fa-i-cursor"></i>
+   <i class="fa fa-hourglass"></i>
+   <i class="fa fa-amazon"></i>
+   <i class="fa fa-registered"></i>
+   <i class="fa fa-dashcube"></i>
+ </nav>
+
+   <thead>
+     <tr>
+       <th>Markers</th>
+       <th>A</th>
+       <th>B</th>
+       <th>C</th>
+       <th>D</th>
+       <th>E</th>
+       <th>F</th>
+       <th>G</th>
+       <th>H</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <th>8</th>
+       <td class="black-rook"></td>
+       <td class="black-knight"></td>
+       <td class="black-bishop"></td>
+       <td class="black-queen"></td>
+       <td class="black-king"></td>
+       <td class="black-bishop"></td>
+       <td class="black-knight"></td>
+       <td class="black-rook"></td>
+     </tr>
+     <tr>
+       <th>7</th>
+       <td class="black-pawn"></td>
+       <td class="black-pawn"></td>
+       <td class="black-pawn"></td>
+       <td class="black-pawn"></td>
+       <td class="black-pawn"></td>
+       <td class="black-pawn"></td>
+       <td class="black-pawn"></td>
+       <td class="black-pawn"></td>
+     </tr>
+     <tr>
+       <th>6</th>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr>
+       <th>5</th>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr>
+       <th>4</th>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr>
+       <th>3</th>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr>
+       <th>2</th>
+       <td class="white-pawn"></td>
+       <td class="white-pawn"></td>
+       <td class="white-pawn"></td>
+       <td class="white-pawn"></td>
+       <td class="white-pawn"></td>
+       <td class="white-pawn"></td>
+       <td class="white-pawn"></td>
+       <td class="white-pawn"></td>
+     </tr>
+     <tr>
+       <th>1</th>
+       <td class="white-rook"></td>
+       <td class="white-knight"></td>
+       <td class="white-bishop"></td>
+       <td class="white-queen"></td>
+       <td class="white-king"></td>
+       <td class="white-bishop"></td>
+       <td class="white-knight"></td>
+       <td class="white-rook"></td>
+     </tr>
+   </table>
+ </tbody>
+
+<nav>
+ <button class="button" id="step_backward" type="button"><i class="fa fa-step-backward"></i></button>
+ <button class="button" id="rewind" type="button"> <i class="fa fa-backward"></i></button>
+ <button class="button" id="play_pause" type="button"><i class="fa fa-youtube-play"></i></button>
+ <button class="button" id="fast_forward" type="button"><i class="fa fa-forward"></i></button>
+ <button class="button" id="step_forward" type="button"><i class="fa fa-step-forward"></i></button>
+</nav>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+      <script src="js/plugins.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/controller.js"></script>
+
+      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+      <script>
+          (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+          e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+          e.src='https://www.google-analytics.com/analytics.js';
+          r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+          ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+      </script>
+ </body>
 </html>

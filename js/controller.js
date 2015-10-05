@@ -124,7 +124,7 @@
         // var $square = (7, 3, 'white-queen');
         // var $square = (7, 4, 'white-king');
         // var $square = ((6, 0, 'white-pawn'), (6, 1, 'white-pawn'), (6, 2, 'white-pawn'), (6, 3, 'white-pawn'), (6, 4, 'white-pawn'), (6, 5, 'white-pawn'), (6, 6, 'white-pawn'), (6, 7, 'white-pawn'));
-            // 'white-rook', 'white-knight', 'white-bishop', 'white-queen', 'white-king', 'white-pawn'
+        //     'white-rook', 'white-knight', 'white-bishop', 'white-queen', 'white-king', 'white-pawn'
         // TODO: Add class name(s) to `td` instead
 
     //    return $square;
